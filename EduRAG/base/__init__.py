@@ -1,2 +1,2 @@
-from base.config import *
-from base.logger import *
+from EduRAG.base.config import *
+from EduRAG.base.logger import *

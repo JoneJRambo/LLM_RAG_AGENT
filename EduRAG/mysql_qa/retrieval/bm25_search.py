@@ -3,9 +3,9 @@ from rank_bm25 import BM25Okapi
 # 导入数值计算库
 import numpy as np
 # 导入文本预处理
-from mysql_qa.utils.preprocess import preprocess_text
+from EduRAG.mysql_qa.utils.preprocess import preprocess_text
 # 导入日志
-from base import logger
+from EduRAG.base import logger
 
 
 class BM25Search:
@@ -110,8 +110,8 @@ class BM25Search:
 
 if __name__ == '__main__':
     # 测试BM25Search类的init方法
-    from mysql_qa.cache.redis_client import RedisClient
-    from mysql_qa.db.mysql_client import MySQLClient
+    from EduRAG.mysql_qa.cache.redis_client import RedisClient
+    from EduRAG.mysql_qa.db.mysql_client import MySQLClient
     redis_client = RedisClient()
     mysql_client = MySQLClient()
     bm25_search = BM25Search(redis_client=redis_client, mysql_client=mysql_client)

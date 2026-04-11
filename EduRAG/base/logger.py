@@ -3,7 +3,7 @@ import logging
 # 导入路径操作库
 import os
 # 导入配置类
-from base.config import Config
+from EduRAG.base.config import Config
 
 
 def setup_logging(log_file=Config().LOG_FILE):

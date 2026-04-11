@@ -3,7 +3,7 @@ import pymysql
 # 导入pandas
 import pandas as pd
 # 导入配置和日志
-from base import Config, logger
+from EduRAG.base import Config, logger
 
 
 class MySQLClient:

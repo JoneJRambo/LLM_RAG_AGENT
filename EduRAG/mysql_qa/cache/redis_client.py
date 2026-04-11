@@ -3,7 +3,7 @@ import redis
 # 导入 JSON 处理
 import json
 # 导入配置和日志
-from base import Config, logger
+from EduRAG.base import Config, logger
 
 
 class RedisClient:

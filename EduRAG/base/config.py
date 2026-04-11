@@ -6,7 +6,7 @@ import os
 
 class Config:
     # 初始化配置，加载 config.ini 文件
-    def __init__(self, config_file=r"D:\code\workspace7\integrated_qa_system\config.ini"):
+    def __init__(self, config_file=r"D:\Code\LLM\EduRAG\config.ini"):
         # 创建配置解析器
         self.config = configparser.ConfigParser()
         # 读取配置文件
