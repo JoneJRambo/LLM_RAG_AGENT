@@ -11,7 +11,7 @@ TODO 温馨提示：
 
 from langchain_community.document_loaders import UnstructuredMarkdownLoader
 # 准备文件
-mk_file_path = "D:/code/workspace7/integrated_qa_system/rag_qa/data/ai_data/人工智能就业课课程大纲.md"
+mk_file_path = "D:/code/LLM/EduRAG/rag_qa/data/ai_data/人工智能就业课课程大纲.md"
 # 创建加载器对象
 loader = UnstructuredMarkdownLoader(file_path=mk_file_path)
 print("loader-->", loader)

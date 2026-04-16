@@ -1,7 +1,7 @@
 from .prompts import RAGPrompts
 #   导入 time 模块，用于计算时间
 import time
-from base import logger, Config
+from EduRAG.base import logger, Config
 from .query_classifier import QueryClassifier  # 导入查询分类器
 from .strategy_selector import StrategySelector  # 导入策略选择器
 

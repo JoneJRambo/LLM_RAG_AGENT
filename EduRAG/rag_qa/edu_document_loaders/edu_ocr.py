@@ -24,6 +24,6 @@ def get_ocr(use_cuda: bool = True) -> "RapidOCR":
 
 if __name__ == '__main__':
     model = get_ocr()
-    result, data = model("D:/code/workspace7/integrated_qa_system/rag_qa/data/samples/ocr_04.png")
+    result, data = model("D:/code/LLM/EduRAG/rag_qa/data/samples/ocr_04.png")
     for each in result:
         print(each)

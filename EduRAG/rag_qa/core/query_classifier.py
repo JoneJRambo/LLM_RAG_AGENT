@@ -4,7 +4,7 @@ import os
 # 导入 PyTorch
 import torch
 # 导入日志
-from base import logger
+from EduRAG.base import logger
 # 导入numpy
 import numpy as np
 # 导入 Transformers 库
@@ -18,7 +18,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 class QueryClassifier:
     def __init__(self, model_path="bert_query_classifier"):
         # 初始化模型路径
-        self.pre_trained_model_path = r'D:\code\workspace7\integrated_qa_system\rag_qa\models\bert-base-chinese'
+        self.pre_trained_model_path = r'D:\Code\LLM\EduRAG\rag_qa\models\bert-base-chinese'
         self.model_path = model_path
         # 加载 BERT 分词器
         self.tokenizer = BertTokenizer.from_pretrained(self.pre_trained_model_path)

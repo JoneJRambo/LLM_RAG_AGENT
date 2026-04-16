@@ -1,9 +1,9 @@
-from rag_qa.core.prompts import RAGPrompts
+from EduRAG.rag_qa.core.prompts import RAGPrompts
 # 导入 time 模块，用于计算时间
 import time
-from base import logger, Config
-from rag_qa.core.query_classifier import QueryClassifier  # 导入查询分类器
-from rag_qa.core.strategy_selector import StrategySelector  # 导入策略选择器
+from EduRAG.base import logger, Config
+from EduRAG.rag_qa.core.query_classifier import QueryClassifier  # 导入查询分类器
+from EduRAG.rag_qa.core.strategy_selector import StrategySelector  # 导入策略选择器
 
 conf = Config()
 
@@ -20,7 +20,7 @@ class RAGSystem:
         self.rag_prompt = RAGPrompts.rag_prompt()
         #   初始化查询分类器
         self.query_classifier = QueryClassifier(
-            model_path='D:/code/workspace7/integrated_qa_system/rag_qa/models/bert_query_classifier/')
+            model_path='D:/code/LLM/EduRAG/rag_qa/models/bert_query_classifier/')
         #   初始化策略选择器
         self.strategy_selector = StrategySelector()
         # 最大 4096 字符

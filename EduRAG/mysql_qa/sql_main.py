@@ -5,7 +5,7 @@ from cache.redis_client import RedisClient
 # 导入 BM25 搜索
 from retrieval.bm25_search import BM25Search
 # 导入日志
-from base import logger
+from EduRAG.base import logger
 # 导入时间库
 import time
 

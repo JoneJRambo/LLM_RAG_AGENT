@@ -11,7 +11,7 @@ from pymilvus import MilvusClient, DataType, AnnSearchRequest, WeightedRanker
 from sentence_transformers import CrossEncoder
 # 导入 hashlib 模块，用于生成唯一 ID 的哈希值
 import hashlib
-from rag_qa.core.document_processor import *
+from EduRAG.rag_qa.core.document_processor import *
 import sys, os
 
 # 获取当前文件所在目录的绝对路径
@@ -153,7 +153,7 @@ class VectorStore:
                     values = row.data
             except Exception as e:
                 # 兼容旧版本 milvus-model
-                row = embeddings["sparse"].getrow(0)
+                row = embeddings["sparse"].getrow(i)
                 indices = row.indices
                 values = row.data
 
@@ -326,7 +326,7 @@ def test_bge_m3():
     # 准备query
     query = "课程优势是什么"
     # 测试BGE-M3模型
-    bgem3 = BGEM3EmbeddingFunction(model_name_or_path=r"D:\code\workspace7\integrated_qa_system\rag_qa\models\bge-m3",
+    bgem3 = BGEM3EmbeddingFunction(model_name_or_path=r"D:\code\LLM\EduRAG\rag_qa\models\bge-m3",
                                    use_fp16=False,
                                    device="cpu")
     # 把query送给模型，得到向量
@@ -338,7 +338,7 @@ def test_bge_m3():
 if __name__ == "__main__":
     # TODO 需要先在milvus中创建itcast数据库，否则执行代码会报错。
     vector_store = VectorStore()
-    # directory_path = 'D:/code/workspace7/integrated_qa_system/rag_qa/data/ai_data'
+    # directory_path = 'D:/code/LLM/EduRAG/rag_qa/data/ai_data'
     # print(f"embedding_function.dim--》{vector_store.embedding_function.dim}")
     # documents = process_documents(directory_path)
     # print("documents-->", documents)

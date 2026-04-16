@@ -15,9 +15,9 @@ sys.path.insert(0, rag_qa_path)
 # 获取根目录文件所在的绝对位置
 project_root = os.path.dirname(rag_qa_path)
 sys.path.insert(0, project_root)
-from rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
-from rag_qa.edu_text_spliter import ChineseRecursiveTextSplitter
-from base import logger, Config
+from EduRAG.rag_qa.edu_document_loaders import OCRPDFLoader, OCRDOCLoader, OCRPPTLoader, OCRIMGLoader
+from EduRAG.rag_qa.edu_text_spliter import ChineseRecursiveTextSplitter
+from EduRAG.base import logger, Config
 
 conf = Config()
 # 定义支持的文件类型及其对应的加载器字典

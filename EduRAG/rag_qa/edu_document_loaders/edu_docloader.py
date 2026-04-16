@@ -1,5 +1,5 @@
 from typing import Iterator
-from rag_qa.edu_document_loaders.edu_ocr import get_ocr
+from EduRAG.rag_qa.edu_document_loaders.edu_ocr import get_ocr
 # 导入必要的模块
 from tqdm import tqdm
 from docx.table import _Cell, Table  # 用于处理表格
@@ -114,7 +114,7 @@ class OCRDOCLoader(BaseLoader):
 
 
 if __name__ == '__main__':
-    docx_loader = OCRDOCLoader(filepath='D:/code/workspace7/integrated_qa_system/rag_qa/data/samples/ocr_02.docx')
+    docx_loader = OCRDOCLoader(filepath='D:/code/LLM/EduRAG/rag_qa/data/samples/ocr_02.docx')
     doc = docx_loader.load()
     for i in doc:
         print(i.page_content)

@@ -1,7 +1,7 @@
 # 导入 LangChain 提示模板
 from langchain_core.prompts import PromptTemplate
 # 导入日志和配置
-from base import logger, Config
+from EduRAG.base import logger, Config
 # 导入 OpenAI
 from openai import OpenAI
 

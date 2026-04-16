@@ -1,5 +1,5 @@
 from typing import Iterator
-from rag_qa.edu_document_loaders.edu_ocr import get_ocr
+from EduRAG.rag_qa.edu_document_loaders.edu_ocr import get_ocr
 from langchain_core.documents import Document
 from langchain_core.document_loaders import BaseLoader
 
@@ -37,7 +37,7 @@ class OCRIMGLoader(BaseLoader):
 
 
 if __name__ == '__main__':
-    img_loader = OCRIMGLoader(img_path='D:/code/workspace7/integrated_qa_system/rag_qa/data/samples/ocr_04.png')
+    img_loader = OCRIMGLoader(img_path='D:/code/LLM/EduRAG/rag_qa/data/samples/ocr_04.png')
     docs = img_loader.load()
     for doc in docs:
         for page in doc.page_content.split("\n"):

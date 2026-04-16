@@ -116,6 +116,6 @@ if __name__ == '__main__':
     mysql_client = MySQLClient()
     bm25_search = BM25Search(redis_client=redis_client, mysql_client=mysql_client)
     # 测试 search方法
-    answer, flag = bm25_search.search('Windows如何安装redis')
+    answer, flag = bm25_search.search('Windows怎么安装redis')
     print("answer-->", answer)
     print('flag-->', flag)

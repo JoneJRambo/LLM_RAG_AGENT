@@ -1,5 +1,5 @@
 from typing import Iterator
-from rag_qa.edu_document_loaders.edu_ocr import get_ocr
+from EduRAG.rag_qa.edu_document_loaders.edu_ocr import get_ocr
 from langchain_core.documents import Document
 from langchain_core.document_loaders import BaseLoader
 from pptx import Presentation
@@ -100,7 +100,7 @@ class OCRPPTLoader(BaseLoader):
 
 
 if __name__ == '__main__':
-    img_loader = OCRPPTLoader(filepath='D:/code/workspace7/integrated_qa_system/rag_qa/data/samples/ocr_01.pptx')
+    img_loader = OCRPPTLoader(filepath='D:/code/LLM/EduRAG/rag_qa/data/samples/ocr_01.pptx')
     doc = img_loader.load()
     for d in doc:
         print(d.page_content)

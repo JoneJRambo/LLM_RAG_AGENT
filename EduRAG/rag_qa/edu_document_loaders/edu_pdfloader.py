@@ -5,7 +5,7 @@ from PIL import Image
 from langchain_text_splitters import CharacterTextSplitter
 from tqdm import tqdm
 from typing import Iterator
-from rag_qa.edu_document_loaders.edu_docloader import get_ocr
+from EduRAG.rag_qa.edu_document_loaders.edu_docloader import get_ocr
 from langchain_core.documents import Document
 from langchain_core.document_loaders import BaseLoader
 
